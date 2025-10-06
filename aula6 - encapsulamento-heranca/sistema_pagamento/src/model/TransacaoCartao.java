@@ -1,0 +1,23 @@
+package model;
+
+import exception.FraudeDetectadaException;
+
+public class TransacaoCartao extends Transacao {
+    public TransacaoCartao(Double valor){
+        super(valor);
+    }
+
+    @Override
+    public boolean validarFraude() throws FraudeDetectadaException {
+        if (this.valor > 5000.00){
+            throw new FraudeDetectadaException("Erro sobre o valor informado! R$ " + this.valor);
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public Double calcularTaxa() {
+        return (this.valor * 0.02) + 1.5;
+    }
+}
