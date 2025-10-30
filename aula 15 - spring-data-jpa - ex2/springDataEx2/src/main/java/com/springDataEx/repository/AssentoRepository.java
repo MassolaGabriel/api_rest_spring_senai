@@ -1,13 +1,13 @@
 package com.springDataEx.repository;
 
-import com.springDataEx.model.Sessao;
+import com.springDataEx.model.Assento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public interface SessaoRepository extends JpaRepository<Sessao, Integer> {
+public interface AssentoRepository extends JpaRepository<Assento,Integer> {
 
-    Optional<Sessao> findAllById(Integer id);
+    Optional<Assento> findAllById(Integer id);
 }

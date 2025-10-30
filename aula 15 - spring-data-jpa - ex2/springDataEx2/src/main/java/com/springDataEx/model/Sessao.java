@@ -5,12 +5,16 @@ import java.time.LocalTime;
 import java.util.List;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 //Criacao modelo sessao ->
 @Entity
 @Table(name = "sessoes")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Sessao {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

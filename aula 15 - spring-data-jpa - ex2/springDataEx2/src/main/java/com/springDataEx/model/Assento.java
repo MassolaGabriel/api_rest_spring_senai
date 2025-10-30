@@ -10,7 +10,7 @@ import lombok.Data;
 public class Assento {
     @Id
     @Column(name = "codigo_assento")
-    private String codigoAssento;
+    private Integer codigoAssento;
 
     @ManyToOne
     @JoinColumn(name = "sala_id")
