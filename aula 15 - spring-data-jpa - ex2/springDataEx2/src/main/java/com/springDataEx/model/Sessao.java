@@ -50,7 +50,7 @@ public class Sessao {
 //	Realizar criacao lógica metodo
 	public String selecionarSessao() {
         String tituloFilme = (this.filme != null) ? this.filme.getTituloFilme() : "Filme não definido";
-        String numeroSala = (this.sala != null) ? this.sala.getNumeroSala().toString() : "Sala não definida";
+        String numeroSala = (this.sala != null) ? this.sala.getId().toString() : "Sala não definida";
 
         return String.format("Sessão %d: %s [Sala: %s | Horário: %s]",
                 this.id,

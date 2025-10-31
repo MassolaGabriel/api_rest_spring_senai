@@ -16,7 +16,7 @@ public class Sala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "numero_sala", nullable = false)
-    private Integer numeroSala;
+    private Integer id;
 
     @Column(name = "capacidade_sala", nullable = false)
     private Integer capacidadeSala;
@@ -28,7 +28,7 @@ public class Sala {
     private List<Assento> assentos;
 
     public Integer consultarSala(){
-        return this.numeroSala;
+        return this.id;
     }
 
 
