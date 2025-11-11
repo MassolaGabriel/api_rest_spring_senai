@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -48,6 +50,7 @@ public class Produto {
     private Integer estoque;
     
     @OneToMany(mappedBy = "produto", cascade = CascadeType.ALL)
+    @JsonManagedReference(value = "produto-item")
     private List<ItemPedido> itensPedido = new ArrayList<>();
     
 

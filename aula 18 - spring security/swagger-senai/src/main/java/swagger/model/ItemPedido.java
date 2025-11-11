@@ -29,12 +29,13 @@ public class ItemPedido {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@JsonBackReference
+	@JsonBackReference(value = "pedido-item")
 	@NotNull(message = "Pedido é obrigatório")
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "pedido_id", nullable = false)
 	private Pedido pedido;
 
+	@JsonBackReference(value = "produto-item")
 	@NotNull(message = "Produto é obrigatório")
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "produto_id", nullable = false)
